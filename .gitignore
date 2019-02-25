@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+
+# Dependency directory
+/node_modules
+
+# Build files
+/dist
+
+# Garbage files
+.DS_Store
