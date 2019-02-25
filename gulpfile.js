@@ -24,9 +24,11 @@ gulp.task('htmlhint',function(){
 //CSS
 gulp.task('sass:build', function() {
     return gulp.src('app/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ])) 
     .pipe(csso())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
         stream: true
@@ -85,8 +87,15 @@ gulp.task('browserSync',function(){
     });
 });
 
-//Сборка
+//Сборки
 gulp.task('build',gulp.parallel(
+    'sass:build',
+    'fonts:build',
+    'js:build',
+    'img:build'
+));
+
+gulp.task('start',gulp.parallel(
     'watch',
     'browserSync',
     'sass:build',
