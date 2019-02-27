@@ -15,12 +15,15 @@
     "gulp-csso": "^3.0.1",
     "gulp-htmlhint": "^2.2.1",
     "gulp-imagemin": "^5.0.3",
+    "gulp-order": "^1.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "imagemin-pngquant": "^7.0.0"
   },
   "dependencies": {
     "autoprefixer": "^9.4.9",
+    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0"
   }
 }

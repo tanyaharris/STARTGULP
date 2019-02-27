@@ -9,6 +9,9 @@ var del = require('del');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
+var concat = require('gulp-concat');
+var pngquant = require('imagemin-pngquant');
+var order = require('gulp-order');
 
 gulp.task('clean',function(){
     return del('dist/');
@@ -28,6 +31,7 @@ gulp.task('sass:build', function() {
     .pipe(sass())
     .pipe(postcss([ autoprefixer() ])) 
     .pipe(csso())
+    .pipe(concat('main.css'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({
@@ -37,11 +41,17 @@ gulp.task('sass:build', function() {
 
 //JS
 gulp.task('js:build',function(){
-    return gulp.src('app/js/**/*.js')
-    .pipe(sourcemaps.init()) 
-    .pipe(uglify()) 
+    return gulp.src('app/js/**/*.*')
+    .pipe(sourcemaps.init())
+    // .pipe(order([
+    //     "jquery/jquery.js",
+    //     "bootstrap/popper.min.js",
+    //     "bootstrap/bootstrap.min.js",
+    // ]))
+    .pipe(concat('main.js'))
+   // .pipe(uglify()) 
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/js/'))
     .pipe(browserSync.reload({
         stream: true
     }))
