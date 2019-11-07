@@ -1,4 +1,7 @@
-# Gulp template
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/14368421/68371143-daa52b80-015f-11ea-8c58-3b922c3d2190.png">
+</p>
+
 ## Required dependencies
 1) Install [npm](https://nodejs.org/en/)
 2) Install [gulp.js](https://gulpjs.com/)
