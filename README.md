@@ -3,7 +3,7 @@
 </p>
 
 ## Required dependencies
-1) run command [ncu]
+1) run command ```ncu```
 2) Install [npm](https://nodejs.org/en/)
 3) Install [gulp.js](https://gulpjs.com/)
 ## Launch
