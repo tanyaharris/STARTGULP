@@ -3,8 +3,9 @@
 </p>
 
 ## Required dependencies
-1) Install [npm](https://nodejs.org/en/)
-2) Install [gulp.js](https://gulpjs.com/)
+1) run command [ncu]
+2) Install [npm](https://nodejs.org/en/)
+3) Install [gulp.js](https://gulpjs.com/)
 ## Launch
 1) Clone or download the project:<br/>
   ```git clone https://github.com/tanyaharris/gulp-template.git name-project```
